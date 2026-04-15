@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Calculadora de Tarefas</title>
+</head>
+<body> <div class="caixa">
+        <h2>Calculadora de Tarefas</h2>
+        
+        <div class="campo-grupo">
+            <label>Valor da Hora (R$): 
+                <input type="number" id="valorHora" placeholder="Valor da Hora" onchange="atualizarTela()">
+            </label>
+            <label>Imposto
+                <input type="number" id="imposto" placeholder="Valor do imposto" onchange="atualizarTela()">
+            </label>
+        </div>
+
+        <div class="campo-grupo">
+            <input type="text" id="nome" placeholder="Nome da Tarefa">
+            <input type="number" id="horas" placeholder="Quantidade de Horas">
+            <button class="adicionar" onclick="adicionarTarefa()">Adicionar</button>
+        </div>
+        <section>
+            <table>
+                <thead> 
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Tempo</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="lista"></tbody>
+            </table>
+        </section>
+        <button class="gerar" onclick="mostrarOrcamento()">Gerar Orçamento Final</button>
+
+        <div id="orcamento" style="display: none;"> <h3>Resumo do Orçamento</h3>
+            <div id="conteudo-orcamento"></div>
+            <hr>
+            <h3 id="total-final">Total: R$ 0,00</h3>
+        </div>
+    </div>
+
+    <script src="/script/script.js"></script>
+</body>
+</html>

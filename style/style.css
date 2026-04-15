@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+.app {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* CARDS */
+.header,
+.painel,
+.lista-container,
+.footer,
+.resultado {
+    background: #1a1a1a;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid #2a2a2a;
+}
+
+/* TITULO */
+.header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* INPUTS */
+.input-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #0a0a0a;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+input:focus {
+    border-color: #ccc;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* BOTÕES */
+button {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #e5e5e5;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffffff;
+    transform: scale(1.03);
+}
+
+/* LISTA */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+li span {
+    color: #ccc;
+}
+
+li button {
+    background: transparent;
+    border: 1px solid #555;
+    padding: 6px 10px;
+    color: #ff4d4d;
+}
+
+/* RESULTADO */
+.resultado {
+    display: none;
+}
+
+.resultado h2 {
+    color: #fff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .input-box {
+        flex-direction: column;
+    }
+}
