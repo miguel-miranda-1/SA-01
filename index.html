@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento de Projeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="nome.png" alt="Logo Orçamento de Projeto" class="logo-header">
+    </div>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#calc">Orçamento</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <img src="nome.png" alt="Logo" class="logo-hero">
+        <h1>Orçamento rápido, simples e profissional</h1>
+        <p>Organize seus projetos e calcule valores de forma prática.</p>
+        <a href="#calc" class="btn-main">Começar agora</a>
+    </section>
+
+    <section class="objetivos" id="objetivos">
+        <h2>Por que usar nosso sistema?</h2>
+        <div class="grid">
+            <div class="card">
+                <strong>Design Profissional</strong>
+                <p>Interface moderna e intuitiva para seus clientes.</p>
+            </div>
+            <div class="card">
+                <strong>Rapidez</strong>
+                <p>Gere orçamentos em segundos sem planilhas chatas.</p>
+            </div>
+            <div class="card">
+                <strong>Clareza</strong>
+                <p>Transparência total nos valores de cada tarefa.</p>
+            </div>
+            <div class="card">
+                <strong>Eficiência</strong>
+                <p>Foco no que importa: o resultado do seu projeto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculadora" id="calc">
+        <div class="box">
+            <h3>Calcular Orçamento</h3>
+            <div class="inputs">
+                <input type="text" id="tarefa" placeholder="Nome da Tarefa">
+                <input type="number" id="horas" placeholder="Horas">
+                <button onclick="adicionarTarefa()">Adicionar</button>
+            </div>
+
+            <div class="table-container">
+                <table id="tabela">
+                    <thead>
+                        <tr>
+                            <th>Tarefa</th>
+                            <th>Horas</th>
+                            <th>Valor</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela">
+                        </tbody>
+                </table>
+            </div>
+
+            <div id="total">Total: <span>R$ 0,00</span></div>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
